@@ -28,7 +28,7 @@ COPY calendso/package.json calendso/yarn.lock calendso/turbo.json ./
 COPY calendso/apps/web ./apps/web
 COPY calendso/packages ./packages
 COPY --from=deps /calcom/node_modules ./node_modules
-RUN yarn build && yarn install --production --ignore-scripts --prefer-offline
+RUN yarn build && yarn install --ignore-scripts --prefer-offline
 
 FROM node:14 as runner
 WORKDIR /calcom
