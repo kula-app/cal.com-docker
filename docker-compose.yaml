@@ -19,6 +19,7 @@ services:
       - stack
 
   calendso:
+    platform: linux/amd64
     build:
       context: .
       dockerfile: Dockerfile
