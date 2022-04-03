@@ -1,4 +1,4 @@
 [submodule "calendso"]
 	path = calendso
-	url = git@github.com:kula-app/calendso.git
+	url = git@github.com:kula-app/cal.com.git
 	branch = main
