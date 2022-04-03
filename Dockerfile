@@ -3,9 +3,12 @@ FROM node:14 as deps
 WORKDIR /calcom
 COPY calendso/package.json calendso/yarn.lock ./
 COPY calendso/apps/web/package.json calendso/apps/web/yarn.lock ./apps/web/
-COPY calendso/packages/prisma/package.json ./packages/prisma/package.json
+COPY calendso/packages/config/package.json ./packages/config/package.json
 COPY calendso/packages/lib/package.json ./packages/lib/package.json
+COPY calendso/packages/prisma/package.json ./packages/prisma/package.json
 COPY calendso/packages/tsconfig/package.json ./packages/tsconfig/package.json
+COPY calendso/packages/types/package.json ./packages/types/package.json
+COPY calendso/packages/ui/package.json ./packages/ui/package.json
 # RUN yarn install --frozen-lockfile
 RUN yarn install
 
